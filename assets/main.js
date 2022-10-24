@@ -7,11 +7,18 @@ function mailVisual() {
     "haSconfittoMafia@hotmail.it",
   ];
 
+let emailTrue = false;
   for (let i = 0; i < everyMail.length; i++) {
-    if (inputMail == everyMail) {
-      console.log("Questa mail è presente");
-    } else if (inputMail !== everyMail) {
-      console.log("Questa mail non è presente");
+  
+    if (inputMail == everyMail[i]) {
+      emailTrue = true; 
+    } 
+}
+
+    if(emailTrue == true){
+      document.getElementById("Risultato").innerHTML = `<div>BENVENUTO</div>` 
+    
+    }else{
+      document.getElementById("Risultato").innerHTML = `<div>REGISTRATI</div>`
     }
   }
-}
