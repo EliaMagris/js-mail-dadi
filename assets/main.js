@@ -27,9 +27,6 @@ function mailVisual() {
 let giocatoreWins = 0;
 let pcWins = 0;
 
-let userWin = document.getElementById("counterPlayer");
-let pcWin = document.getElementById("counterPC")
-
 function numberVisual() {
   let giocatore = (document.getElementById("playerNumber").innerHTML = Math.round(Math.random() * 6));
 
@@ -48,8 +45,8 @@ function numberVisual() {
     document.getElementById("numberResult").innerHTML = `<div>BRUTTO STO PAREGGIO</div>`;
   }
 
-userWin.innerHTML = `Vittorie del giocatore: ${giocatoreWins}`;
-pcWin.innerHTML = `Vittorie del pc: ${pcWins}`;
+document.getElementById("counterPlayer").innerHTML = `Vittorie del giocatore: ${giocatoreWins}`;
+document.getElementById("counterPC").innerHTML = `Vittorie del pc: ${pcWins}`;
 
 }
 
